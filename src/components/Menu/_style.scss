@@ -6,7 +6,7 @@
   border-bottom: $menu-border-width solid $menu-border-color;
   box-shadow: $menu-box-shadow;
   list-style: none;
-  .shandl-menuItem {
+  >.shandl-menuItem {
     padding: $menu-item-padding-y $menu-item-padding-x;
     cursor: pointer;
     transition: $menu-transition;
@@ -22,6 +22,42 @@
       color: $menu-item-active-color;
       border-bottom: $menu-item-active-border-width solid $menu-item-active-color;
     }
+  }
+  .shandl-submenuItem {
+    position: relative;
+  }
+  .shandl-submenu {
+    display: none;
+    list-style:none;
+    padding-left: 0;
+    white-space: nowrap;
+    //transition: $menu-transition;
+    .shandl-menuItem {
+      padding: $menu-item-padding-y $menu-item-padding-x;
+      cursor: pointer;
+      transition: $menu-transition;
+      color: $body-color;
+      &.shandl-menuItem-active, &:hover {
+        color: $menu-item-active-color !important;
+      }
+    }
+  }
+  .shandl-submenu.menu-opened {
+    display: block;
+  }
+}
+.shandl-menu-horizontal {
+  >.shandl-menuItem {
+    border-bottom: $menu-item-active-border-width solid transparent;
+  }
+  .shandl-submenu {
+    position: absolute;
+    background: $white;
+    z-index: 100;
+    top: calc(100% + 8px);
+    left: 0;
+    border: $menu-border-width solid $menu-border-color;
+    box-shadow: $submenu-box-shadow;
   }
 }
 .shandl-menu-vertical {
