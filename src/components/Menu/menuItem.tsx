@@ -17,7 +17,6 @@ const MenuItem: React.FC<MenuItemProps> = props => {
     'shandl-menuItem-active': context.index === index
   })
   const handleClick = () => {
-    console.log(context)
     if(context.onSelect && !disabled && (typeof index === "string")){
       context.onSelect(index)
     }

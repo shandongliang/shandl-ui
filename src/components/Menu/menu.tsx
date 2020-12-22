@@ -31,7 +31,6 @@ const Menu: React.FC<MenuProps> = props => {
     'shandl-menu-horizontal': mode !== 'vertical'
   })
   const handleClick = (index: string) => {
-    console.log(index)
     setCurrentIndex(index)
     if(onSelect){
       onSelect(index)

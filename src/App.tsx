@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Menu onSelect={index=>alert(index)} mode='vertical' defaultOpenSubMenus={['2']}>
+        <Menu onSelect={index=>alert(index)} mode='vertical'>
           <MenuItem>shan</MenuItem>
           <MenuItem>dong</MenuItem>
           <SubMenu title='dropdown'>
